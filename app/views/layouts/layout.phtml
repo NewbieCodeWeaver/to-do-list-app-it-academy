@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<?php echo $this->content(); ?>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/datepicker.js"></script>
+    <title>Mis tareas</title>
+  </head>
+  <header class="mb-10">
+      <div class="columns-2 bg-gradient-to-r from-cyan-500 to-blue-500 p-10">
+        <div class="p-1"><a href="../web/"><img src="images/logo-task.png"></a></div>
+        <div class="p-6"><div class="float-right w-33 rounded-lg bg-orange-400 p-4 text-center text-base font-semibold text-red-50 hover:bg-orange-500"><a href="../web/add"> <i class="fa-solid fa-circle-plus"></i></i><span class="pl-2">NUEVA TAREA</span></a></div></div>
+      </div></header>
+      <body>
+	  <?php echo $this->content(); ?>
+  </body>
+
+<footer class ="mt-10"><div class= "h-16 bg-gradient-to-r from-cyan-500 to-blue-500"><div class="text-center pt-5 text-white">Task.it</div></footer>
+
 </html>
