@@ -1,0 +1,48 @@
+<?php
+
+$getTarea = ($this->tareaVer);  // var_dump($getTarea); ?>
+
+
+
+<div class="pl-80 pr-80 pt-5">
+
+  <div>
+    <div class="p-6 mt-5  bg-stone-200 ">
+<h1 class=" text-center text-2xl">Ver "<?php echo $getTarea["nombre"]?>"</h1>
+</div>
+
+<div class="bg-sky-100 p-14">
+<form method="post" class= "w-full">
+ <div>
+  <label>Nombre tarea</label>
+  <div>
+  <input type="text" id="nombre" name="nombre" class="w-full mt-1 p-2 bg-white" value="<?php echo $getTarea["nombre"] ?>" readonly><br><br>
+  </div>
+  <label>Fecha inicio</label>
+  <div>
+  <input datepicker type="text" id="finicio" name="f_inicio" class="w-full mt-1 p-2 bg-white" value="<?php echo $getTarea["f_inicio"] ?>" readonly><br><br>
+  </div>
+  <label>Fecha fin</label>
+  <div>
+  <input datepicker type="text" id="ffin" name="f_fin" class="w-full mt-1 p-2 bg-white"  value="<?php echo $getTarea["f_fin"] ?>" readonly><br><br>
+  </div>
+  <label>Creador</label>
+  <div>
+  <input type="text" id="creador" name="creador" class="w-full mt-1 p-2 bg-white"  value="<?php echo $getTarea["creador"] ?>" readonly><br><br>
+  </div>
+  <div class="pt-2">
+  <label class="pr-3">Estado</label>
+<input type="text" name="estado" id="estado" class=" p-2 bg-white text-transform: capitalize;"  value="<?php echo $getTarea["estado"] ?>" readonly>
+<br><br>
+<div class="pt-10">
+<a href="../web/"><input type="button" value="Volver" class="bg-blue-500 pt-3 pb-3 pl-5 pr-5 text-white rounded hover:bg-blue-600"></a></div>
+</div>
+</div>
+</form>
+
+</div>
+
+  </div>
+
+
+</div></div>
