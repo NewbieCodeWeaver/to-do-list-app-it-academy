@@ -10,5 +10,10 @@
  * '/calendar' => 'calendar#index'
  */
 $routes = array(
-	'/test' => 'test#index'
+	'/' => 'index#index', // muestra listado de tareas
+	'/view' => 'view#viewTask', // muestra una tarea
+	'/add' => 'add#addTask', // añade una tarea
+	'/remove' => 'remove#removeTask', // elimina una tarea
+	'/edit' => 'edit#editTask', // edita una tarea
+
 );
