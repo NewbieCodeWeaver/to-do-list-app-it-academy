@@ -3,7 +3,7 @@
 require_once ROOT_PATH . '/app/models/modelo_tareas.php';
 
 
-class viewController extends ApplicationController
+class ViewController extends ApplicationController
 
 {
 

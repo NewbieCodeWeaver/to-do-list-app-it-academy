@@ -2,7 +2,7 @@
 
 require_once ROOT_PATH . '/app/models/modelo_tareas.php';
 
-class indexController extends ApplicationController
+class IndexController extends ApplicationController
 
 
 {	

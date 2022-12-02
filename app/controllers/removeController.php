@@ -3,7 +3,7 @@
 require_once ROOT_PATH . '/app/models/modelo_tareas.php';
 
 
-class removeController extends ApplicationController
+class RemoveController extends ApplicationController
 
 {
 
