@@ -16,7 +16,6 @@ class modeloTareas extends Model
 	{
 
 		$array_Tareas = json_decode($this->bbd, true);
-
 		return $array_Tareas;
 	}
 
@@ -28,10 +27,10 @@ class modeloTareas extends Model
 		$arrayTareas = json_decode($this->bbd, true);
 
 		foreach ($arrayTareas as $i => $tarea) {
+			
 			if ($tarea['_id'] == $id) {
 
 				$taskToView = ($arrayTareas[$i]);
-
 				return $taskToView;
 
 			}
@@ -52,11 +51,8 @@ class modeloTareas extends Model
 
 				$getLastArray = end($arrayTareas);
 				$getID = current($getLastArray);
-		
 				$nuevaKey = ++$getID;
 		
-		 
-	
 			} else {
 
 	   			$nuevaKey = 1; }
@@ -78,7 +74,6 @@ class modeloTareas extends Model
 		if ($arrayTareas != NULL) {
 
 			array_push($arrayTareas, $arrayAgregar);
-
 			$json = json_encode($arrayTareas);
 
 	
@@ -90,8 +85,6 @@ class modeloTareas extends Model
 	}
 
 			file_put_contents("../app/models/tareas.json", $json);
-
-			
 			return header("Location: ../web/" );
 	}
 
@@ -102,6 +95,7 @@ class modeloTareas extends Model
 		$arrayTareas = json_decode($this->bbd, true);
 
 		foreach ($arrayTareas as $i => $tarea) {
+			
 			if ($tarea['_id'] == $id) {
 
 				unset($arrayTareas[$i]);
