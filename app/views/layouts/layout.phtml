@@ -1,36 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+  <html lang="es">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-  <script src="https://unpkg.com/flowbite@1.4.7/dist/datepicker.js"></script>
-  <title>Task it - Gestiona tus tareas</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <script src="https://unpkg.com/flowbite@1.4.7/dist/datepicker.js"></script>
+    <title>Task it - Gestiona tus tareas</title>
+  </head>
 
-<!-- Header -->
-<?php
-
-include(ROOT_PATH . '/app/views/layouts/partials/header.phtml');
-
-?>
-
-<!-- Body -->
-
-<body>
-  <?php echo $this->content(); ?>
-</body>
+  <!-- Header -->
+  <?php include(ROOT_PATH . '/app/views/layouts/partials/header.phtml');?>
 
 
-<!-- Footer -->
+  <!-- Body -->
+  <body>
+    <?php echo $this->content(); ?>
+  </body>
 
 
-<?php
-
-include(ROOT_PATH . '/app/views/layouts/partials/footer.phtml');
-
-?>
+  <!-- Footer -->
+  <?php include(ROOT_PATH . '/app/views/layouts/partials/footer.phtml'); ?>
 
 </html>

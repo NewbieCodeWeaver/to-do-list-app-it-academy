@@ -2,37 +2,61 @@
   
 $tareas = ($this->contenido);?> 
 
-<div id="tabla-tareas" class="p-11">
-<table class="w-full">
+<div id="tabla-tareas" class="grid place-content-center overflow-x-auto">
+    <table class="w-full">
         <thead class=" bg-slate-200">
-        <tr>
-            <th class=" text-left p-8">Nombre</th>
-            <th class=" text-left p-8">Fecha de inicio</th>
-            <th class=" text-left p-8">Fecha fin</th>
-            <th class=" text-left p-8">Creador</th>
-            <th class=" text-left p-8">Estado</th>
-            <th class=" text-left p-8">Acciones</th>
-        </tr>
+            <tr>
+                <th class="text-left p-8">
+                    Nombre
+                </th>
+                <th class="hidden md:table-cell text-left p-8">
+                    Fecha de inicio
+                </th>
+                <th class="hidden md:table-cell text-left p-8">
+                    Fecha fin
+                </th>
+                <th class="hidden md:table-cell text-left p-8">
+                    Creador
+                </th>
+                <th class=" text-left p-8">
+                    Estado
+                </th>
+                <th class=" text-left p-8">
+                    Acciones
+                </th>
+            </tr>
         </thead>
         <tbody class=" bg-sky-100">
-        <?php foreach ($tareas as $tarea): ?>
-            <tr class="hover:bg-sky-200">
-                <td class="p-8 text-transform: capitalize"><?php echo $tarea["nombre"] ?></td>
-                <td class="p-8 text-transform: capitalize"><?php echo $tarea["f_inicio"] ?></td>
-                <td class="p-8 text-transform: capitalize"><?php echo $tarea["f_fin"] ?></td>
-                <td class="p-8 text-transform: capitalize"><?php echo $tarea["creador"] ?></td>
-                <td class="p-8 text-transform: capitalize"><?php echo $tarea["estado"] ?></td>
-                <td class="p-8">
-                <a href="view?id=<?php echo $tarea["_id"] ?>"><i class="fas fa-eye"></i></a>
-                       <span> | </span>
-                    <a href="edit?id=<?php echo $tarea["_id"] ?>"><i class="fas fa-edit"></i></a>
-                       <span> | </span>
-                    <a href="remove?id=<?php echo $tarea["_id"] ?>"><i class="fa-solid fa-eraser"></i></a>
-                </td>
-            </tr>
-        <?php endforeach; ?>
+            <?php foreach ($tareas as $tarea): ?>
+                <tr class="hover:bg-sky-200">
+                    <td class="p-8 text-transform: capitalize"><?php echo $tarea["nombre"] ?></td>
+                    <td class="hidden md:table-cell p-8 text-transform: capitalize">
+                        <?php echo $tarea["f_inicio"] ?>
+                    </td>
+                    <td class="hidden md:table-cell p-8 text-transform: capitalize">
+                        <?php echo $tarea["f_fin"] ?>
+                    </td>
+                    <td class="hidden md:table-cell p-8 text-transform: capitalize">
+                        <?php echo $tarea["creador"] ?>
+                    </td>
+                    <td class="p-8 text-transform: capitalize">
+                        <?php echo $tarea["estado"] ?>
+                    </td>
+                    <td class="p-8">
+                    <a href="view?id=<?php echo $tarea["_id"] ?>">
+                    <i class="fas fa-eye"></i></a>
+                            <span> | </span>
+                        <a href="edit?id=<?php echo $tarea["_id"] ?>"><i class="fas fa-edit"></i></a>
+                            <span> | </span>
+                        <a href="remove?id=<?php echo $tarea["_id"] ?>"><i class="fa-solid fa-eraser"></i></a>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </tbody>
     </table>
-
-    <div class=" text-center pt-10"><i class="fas fa-tasks"></i><span class="pl-4">Mostrando  </span><?php echo $this->taskNumber; ?> tareas</div>
+ <div class=" text-center pt-10">
+  <i class="fas fa-tasks"></i><span class="pl-4">Mostrando  </span>
+  <?php echo $this->taskNumber; ?>
+  tareas
+ </div>
 </div>
